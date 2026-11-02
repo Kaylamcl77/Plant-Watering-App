@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <title>Rooted | Plant care, made simple</title>
+  <meta name="description" content="A student prototype for prioritizing plant watering and finding plant sitters.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
   <header class="site-header">
     <a class="brand" href="#home" id="brand-name">YourStartup</a>
     <nav aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
-      <a href="#about">About</a>
+      <a href="#home">Dashboard</a>
+      <a href="#sitters">Plant sitters</a>
+      <a href="#about">Why Rooted</a>
     </nav>
   </header>
 
@@ -29,55 +29,38 @@
          ======================================================= -->
     <section id="home" data-view>
       <div class="hero">
-        <p class="eyebrow">Prototype</p>
+        <p class="eyebrow">Monday, November 2</p>
         <h1 id="tagline">One sentence that says what your startup does.</h1>
         <p class="lead" id="pitch">
           Who is your customer, what problem do they have, and why is your
           solution better than what they use today?
         </p>
-        <a class="button" href="#explore">See it in action</a>
+        <a class="button" href="#sitters">Plan time away <span aria-hidden="true">→</span></a>
       </div>
 
-      <div class="steps">
-        <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
-        </div>
-        <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
-        </div>
-        <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
-        </div>
-      </div>
+      <div class="dashboard-heading"><div><p class="eyebrow">Today’s care plan</p><h2>Watering priority</h2></div><p class="muted" id="plant-summary"></p></div>
+      <div class="plant-list" id="plant-list"></div>
+      <p class="empty" id="plant-empty" hidden>All caught up. Your plants are feeling good.</p>
     </section>
 
     <!-- =======================================================
          VIEW 2: EXPLORE — a list built from the fake data in data.js.
          ======================================================= -->
-    <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
-
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
-
-      <p class="muted" id="saved-count"></p>
-      <div class="grid" id="listing-grid"></div>
-      <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
+    <section id="sitters" data-view hidden>
+      <div class="section-intro"><p class="eyebrow">Care cover</p><h1>Going away? Leave the watering to someone local.</h1><p class="lead">Book a screened plant sitter for the days your reminder cannot reach you.</p></div>
+      <div class="sitter-banner"><div><strong>Rooted Care Cover</strong><span>Starting at $15 per visit · screened local sitters</span></div><button class="button" type="button" id="notify-button">Join the waitlist</button></div>
+      <div class="sitter-list" id="sitter-list"></div>
+      <p class="muted demo-note" id="notify-message" hidden>Thanks. We’ll let you know when Care Cover launches in your area.</p>
     </section>
 
     <!-- =======================================================
          VIEW 3: ABOUT — your team and your story.
          ======================================================= -->
     <section id="about" data-view hidden>
-      <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
+      <p class="eyebrow">The business idea</p>
+      <h1>Useful first. Monetized with trust.</h1>
+      <p class="lead">Rooted keeps the daily care experience quiet and focused. The free dashboard earns trust; Care Cover creates revenue through a paid service people already need when they travel.</p>
+      <div class="about-grid"><div class="card"><span class="tag">Free core</span><h2>Watering priorities</h2><p>See what needs attention first, mark it done, and build a reliable routine.</p></div><div class="card"><span class="tag accent-tag">Paid expansion</span><h2>Plant sitters</h2><p>Rooted takes a booking fee from plant-care visits. Ads can distract from reminders and do not fit the high-trust moment.</p></div></div>
     </section>
 
   </main>

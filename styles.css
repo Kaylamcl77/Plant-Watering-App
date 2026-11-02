@@ -158,3 +158,70 @@ h1 { line-height: 1.2; }
   main { padding: 20px 16px 48px; }
   nav { gap: 14px; }
 }
+
+/* ---------- Rooted dashboard ---------- */
+:root {
+  --brand: #c94f7c;
+  --brand-dark: #8f3158;
+  --text: #35212b;
+  --muted: #78636d;
+  --background: #fff4f7;
+  --surface: #fffdfd;
+  --border: #f0d7df;
+  --radius: 8px;
+  --font: Georgia, "Times New Roman", serif;
+  --sans: "Trebuchet MS", Verdana, sans-serif;
+}
+body { background: radial-gradient(circle at 90% 0%, #f8dce7 0, transparent 30%), var(--background); }
+body, button, input { font-family: var(--font); }
+.site-header { background: rgba(255, 253, 253, 0.9); padding: 18px max(24px, calc((100% - 1000px) / 2)); }
+.brand { color: var(--brand-dark); font-size: 1.4rem; letter-spacing: 0.02em; }
+nav a, .button, .eyebrow, .tag, .priority, .sitter-card strong, .muted, .plant-card p, .sitter-card p, .sitter-banner span, .demo-note { font-family: var(--sans); }
+main { max-width: 1000px; padding-top: 48px; }
+.hero { max-width: 720px; padding: 18px 0 58px; }
+.hero h1, .section-intro h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 0.98; letter-spacing: -0.02em; margin: 10px 0 22px; }
+.lead { max-width: 650px; font-size: 1.2rem; color: var(--muted); }
+.button { border-radius: 4px; transition: background 160ms ease, transform 160ms ease; }
+.button:hover { background: var(--brand-dark); transform: translateY(-1px); }
+.button.secondary { border-color: var(--border); color: var(--brand-dark); background: transparent; margin-top: 0; }
+.button.secondary:hover { border-color: var(--brand); background: #fdeaf1; }
+.dashboard-heading { display: flex; align-items: end; justify-content: space-between; border-bottom: 2px solid var(--text); margin-bottom: 10px; }
+.dashboard-heading h2 { font-size: 1.8rem; margin: 4px 0 12px; }
+.dashboard-heading .muted { margin-bottom: 14px; }
+.plant-list { display: grid; gap: 10px; }
+.plant-card { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px; background: var(--surface); border: 1px solid var(--border); border-left: 5px solid #e6a14f; border-radius: var(--radius); }
+.plant-card.is-watered { border-left-color: var(--brand); opacity: 0.7; }
+.plant-copy, .plant-action { display: flex; align-items: center; gap: 14px; }
+.plant-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #f9dce7; color: var(--brand); font-size: 1.7rem; }
+.plant-card h3 { margin: 0; font-size: 1.25rem; }
+.plant-card p { margin: 3px 0 0; color: var(--muted); font-size: 0.88rem; }
+.plant-card .tag { margin: 0 0 2px; padding: 0; background: none; color: var(--muted); }
+.priority { font-size: 0.82rem; font-weight: 700; white-space: nowrap; }
+.priority.urgent { color: #b55235; }
+.priority.soon { color: #a56a13; }
+.priority.planned { color: var(--brand); }
+.section-intro { max-width: 680px; padding-bottom: 28px; }
+.section-intro h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+.sitter-banner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px; background: var(--brand-dark); color: #fffdfd; border-radius: var(--radius); margin-bottom: 22px; }
+.sitter-banner strong, .sitter-banner span { display: block; }
+.sitter-banner strong { font-size: 1.25rem; }
+.sitter-banner span { margin-top: 4px; color: #f5cad9; font-size: 0.9rem; }
+.sitter-banner .button { background: #f4b9ce; color: var(--text); }
+.sitter-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.sitter-card { display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.avatar { display: grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #f4d5e0; color: var(--brand-dark); font-weight: bold; font-family: var(--sans); }
+.sitter-info { flex: 1; }
+.sitter-card h2 { margin: 0; font-size: 1rem; }
+.sitter-card p { margin: 3px 0 0; color: var(--muted); font-size: 0.75rem; }
+.sitter-card strong { white-space: nowrap; font-size: 0.8rem; color: var(--brand-dark); }
+.about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 32px; }
+.accent-tag { background: #f9dce7; color: #8f3158; }
+.demo-note { margin-top: 14px; color: var(--brand-dark); }
+.site-footer { font-family: var(--sans); background: #f8e4eb; }
+
+@media (max-width: 680px) {
+  .dashboard-heading, .sitter-banner { align-items: flex-start; flex-direction: column; }
+  .plant-card { align-items: flex-start; flex-direction: column; }
+  .plant-action { justify-content: space-between; width: 100%; }
+  .sitter-list, .about-grid { grid-template-columns: 1fr; }
+}

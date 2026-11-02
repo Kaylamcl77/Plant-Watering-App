@@ -11,16 +11,20 @@
 // ============================================================
 
 const STARTUP = {
-  name: "YourStartup",
-  tagline: "One sentence that says what your startup does.",
-  pitch: "Who is your customer, what problem do they have, and why is your solution better than what they use today?"
+  name: "Rooted",
+  tagline: "Water the right plant, right on time.",
+  pitch: "A calm plant-care dashboard that puts the thirsty plants first, then connects you with trusted plant sitters when life gets busy."
 };
 
-const LISTINGS = [
-  { id: 1, name: "Sample listing A", category: "Category 1", description: "A short description of this item." },
-  { id: 2, name: "Sample listing B", category: "Category 2", description: "A short description of this item." },
-  { id: 3, name: "Sample listing C", category: "Category 1", description: "A short description of this item." },
-  { id: 4, name: "Sample listing D", category: "Category 3", description: "A short description of this item." },
-  { id: 5, name: "Sample listing E", category: "Category 2", description: "A short description of this item." },
-  { id: 6, name: "Sample listing F", category: "Category 3", description: "A short description of this item." }
+const PLANTS = [
+  { id: 1, name: "Calathea", location: "Living room", species: "Prayer plant", nextWatering: "2026-11-02", interval: "Every 5 days", note: "Use filtered water" },
+  { id: 2, name: "Meyer lemon", location: "Kitchen window", species: "Citrus", nextWatering: "2026-11-03", interval: "Every 7 days", note: "Check the top inch first" },
+  { id: 3, name: "Snake plant", location: "Hallway", species: "Sansevieria", nextWatering: "2026-11-06", interval: "Every 14 days", note: "Let soil dry fully" },
+  { id: 4, name: "Monstera", location: "Office", species: "Tropical", nextWatering: "2026-11-08", interval: "Every 10 days", note: "Rotate toward the light" }
+];
+
+const SITTERS = [
+  { name: "Maya R.", area: "Downtown", rating: "5.0", visits: "38 visits", price: "$18 / visit" },
+  { name: "Jordan K.", area: "North End", rating: "4.9", visits: "24 visits", price: "$15 / visit" },
+  { name: "Priya S.", area: "Westside", rating: "4.8", visits: "19 visits", price: "$16 / visit" }
 ];
